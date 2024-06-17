@@ -34,11 +34,11 @@ export default function ContactForm() {
     >
       <Form className={css.form}>
         <div className={css.formFields}>
-          <label className={css.formInputLabel} htmlFor={`${fieldId}-name`}>
+          <label className={css.inputBox} htmlFor={`${fieldId}-name`}>
             Name
           </label>
           <Field
-            className={css.input}
+            className={css.label}
             type="text"
             name="name"
             id={`${fieldId}-name`}
@@ -47,19 +47,18 @@ export default function ContactForm() {
         </div>
 
         <div className={css.formFields}>
-          <label className={css.formInputLabel} htmlFor={`${fieldId}-number`}>
+          <label className={css.inputBox} htmlFor={`${fieldId}-number`}>
             Number
           </label>
           <Field
-            className={css.input}
+            className={css.label}
             type="tel"
             name="number"
             id={`${fieldId}-number`}
           />
           <ErrorMessage className={css.error} name="number" component="span" />
         </div>
-
-        <button className={css.btn} type="submit">
+        <button className={css.btnAdd} type="submit">
           Add contact
         </button>
       </Form>
